@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 const axios = require('axios');
 
-export default class CreateComponent extends Component {
+export default class UserCreate extends Component {
     constructor(props) {
         super(props);
         this.onChangeUsername = this.onChangeUsername.bind(this);

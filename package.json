@@ -5,12 +5,15 @@
   "dependencies": {
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
-    "bootstrap": "4.0.0",
+    "bootstrap": "^4.0.0",
     "cors": "^2.8.5",
     "express": "^4.16.4",
+    "jquery": "^3.4.0",
     "mongoose": "^5.5.4",
     "nodemon": "^1.18.11",
     "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.8",
+    "react-calendar": "^2.18.1",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0"

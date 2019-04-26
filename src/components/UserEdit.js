@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class EditComponent extends Component {
+export default class UserEdit extends Component {
 
     constructor(props) {
         super(props);

@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import TableRow from './TableRow';
 
-export default class IndexComponent extends Component {
+export default class UserIndex extends Component {
 
   constructor(props) {
       super(props);
@@ -27,7 +27,8 @@ export default class IndexComponent extends Component {
 
     render() {
       return (
-        <div className="container">
+        <div className="container" style={{marginTop: 25}}>
+        <h3>Manage Volunteers</h3>
             <table className="table table-striped">
               <thead>
                 <tr>
