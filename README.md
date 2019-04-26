@@ -1,5 +1,11 @@
 # CBV Rosters
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/josh-tf/cbv-roster/graphs/commit-activity)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/josh-tf/cbv-pos.svg)](https://github.com/josh-tf/cbv-roster/pulls/)
+[![GitHub issues](https://img.shields.io/github/issues/josh-tf/cbv-pos.svg)](https://GitHub.com/josh-tf/cbv-roster/issues/)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+[![GitHub commits](https://img.shields.io/github/commit-activity/y/josh-tf/cbv-pos.svg)](https://github.com/josh-tf/cbv-roster/commit/)
+
 **cbv-roster** is a web application for managing volunteer rosters at [Computerbank Victoria Inc.](http://computerbank.org.au).
 
 The goal of the project is to create an easy to use/manage roster system with possible future expansion with other volunteer related features (chat, file sharing etc).
