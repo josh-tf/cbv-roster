@@ -1,69 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CBV Rosters
 
-## Available Scripts
+**cbv-roster** is a web application for managing volunteer rosters at [Computerbank Victoria Inc.](http://computerbank.org.au).
 
-In the project directory, you can run:
+The goal of the project is to create an easy to use/manage roster system with possible future expansion with other volunteer related features (chat, file sharing etc).
 
-### `npm start`
+## Stack
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Details of the current full-stack can be found below, components may change or be added in the future as additional requirements are included in the project pipeline.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+**Front end -** [React](https://reactjs.org/) <br>
+**Back end -** [Node.js](https://nodejs.org/) + [Express.js](https://expressjs.com/) <br>
+**Database -** [MongoDB](https://www.mongodb.com/) <br>
 
-### `npm test`
+![](https://i.imgur.com/CylWiH5.jpg) ![](https://i.imgur.com/EGWlnxq.jpg) <br>
+![](https://i.imgur.com/QWG5K3P.jpg) ![](https://i.imgur.com/8k0NJQN.jpg)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Installation / Running
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone this repository and `cd` in to it and then run the following commands:
+```bash
+yarn start
+nodemon server/server
+```
+`yarn start` will run the app server and display the front end
+`nodemon server/server` will run `server.js` which handles the endpoint for database actions (insert, update, etc) via its own router.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Database Configuration
+The MongoDB server is not provided as part of this package, you will need to run a server instance and create the `cbv-roster` database.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If you are running on a non standard port you can edit this in `database\db.js`. At some point this will be handled as part of the build.
+```javascript
+module.exports  = {
+db: 'mongodb://localhost:27017/cbv-roster'
+}
+```
 
-### `npm run eject`
+## To-do / Project Pipeline
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This will be an on-going project and will also function as a tool to learn the various components of the stack, some of the required functionality for the application will include:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - Generating rosters (weekly on schedule + adhoc)
+ - User management system with login
+ - Ability to 'sign up' to a roster
+ - Email notifications (possible SMS notifications?)
+ - Various admin tasks (edit rosters, users etc)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Suggestions are welcome, please open an issue to discuss or contact me via the email under my user page.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Authors & Licence
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-======
+- Currently developed with ❤️ by [josh-tf](https://github.com/josh-tf) 
+- This project is created under the [MIT](https://choosealicense.com/licenses/mit/) licence
