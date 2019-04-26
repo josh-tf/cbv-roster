@@ -23,7 +23,7 @@ Clone this repository and `cd` in to it and then run the following commands:
 yarn start
 nodemon server/server
 ```
-`yarn start` will run the app server and display the front end
+`yarn start` will run the app server and display the front end<br>
 `nodemon server/server` will run `server.js` which handles the endpoint for database actions (insert, update, etc) via its own router.
 
 ## Database Configuration
