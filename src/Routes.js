@@ -15,7 +15,7 @@ class Routes extends Component {
         return (
             <div>
                 <Route exact path="/" component={Homepage} />
-                <Route exact path="/rosters/:page?" component={Rosters} />
+                <Route exact path="/rosters/:day?" component={Rosters} />
                 <Route exact path="/manage/user/create" component={UserCreate} />
                 <Route exact path="/manage/user/edit/:id" component={UserEdit} />
                 <Route exact path="/manage/user/index" component={UserIndex} />

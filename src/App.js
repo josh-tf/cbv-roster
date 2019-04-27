@@ -23,7 +23,7 @@ class App extends Component {
               <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                   <Nav.Link href="/">Home</Nav.Link>
-                  <Nav.Link href="/rosters">Rosters</Nav.Link>
+                  <Nav.Link href="/rosters/friday">Rosters</Nav.Link>
                   <NavDropdown title="Manage" id="basic-nav-dropdown">
                     <NavDropdown.Item href="/manage/user/index">
                       Users
