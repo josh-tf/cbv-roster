@@ -33,7 +33,7 @@ class AlertNotice extends Component {
     }
 }
 
-export default class Homepage extends Component {
+export default class Rosters extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -63,16 +63,13 @@ export default class Homepage extends Component {
 
           <Row>
             <Col xs={12} md={8}>
-              <h5>Upcoming Sign-ups</h5>
-              <div style={{marginTop: 15}}>
-                <Table striped bordered hover size="sm">
+              <h5>Available Rosters</h5>
+              <Table striped bordered hover size="sm">
                 <thead>
                   <tr>
                     <th>Day</th>
-                    <th>Date</th>
-                    <th>Days-until</th>
-                    <th>Position</th>
-                    <th>Cancel</th>
+                    <th>Next Roster</th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -80,39 +77,27 @@ export default class Homepage extends Component {
                     <td>Friday</td>
                     <td>26/04/19</td>
                     <td>
-                      <Badge variant="primary">today</Badge>
-                    </td>
-                    <td>User Support</td>
-                    <td>
-                      <Button variant="outline-primary btn-sm">Edit</Button>{" "}
-                      <Button variant="outline-danger btn-sm">Cancel</Button>
+                      <Button variant="outline-primary btn-sm">View Rosters</Button>
                     </td>
                   </tr>
                   <tr>
                     <td>Saturday</td>
                     <td>04/05/19</td>
-                    <td>8 days</td>
-                    <td>Front Desk</td>
                     <td>
-                      <Button variant="outline-primary btn-sm">Edit</Button>{" "}
-                      <Button variant="outline-danger btn-sm">Cancel</Button>
+                      <Button variant="outline-primary btn-sm">View Rosters</Button>
                     </td>
                   </tr>
                   <tr>
                     <td>Saturday</td>
                     <td>11/05/19</td>
-                    <td>15 days</td>
-                    <td>Front Desk</td>
                     <td>
-                      <Button variant="outline-primary btn-sm">Edit</Button>{" "}
-                      <Button variant="outline-danger btn-sm">Cancel</Button>
+                      <Button variant="outline-primary btn-sm">View Rosters</Button>
                     </td>
                   </tr>
                 </tbody>
               </Table>
-              </div>
               <hr />
-              <h5>My Attendance</h5>
+              <h5>Upcoming Rosters for Fridays</h5>
               <p>
                 If you forgot to sign in you can edit your attendance under the
                 manage menu above, this data is used for aggregated and
@@ -121,35 +106,52 @@ export default class Homepage extends Component {
               <Table striped bordered hover size="sm">
                 <thead>
                   <tr>
-                    <th>Day</th>
                     <th>Date</th>
-                    <th>Position</th>
-                    <th>Status</th>
+                    <th>Slots</th>
+                    <th>Details</th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>Friday</td>
-                    <td>26/04/19</td>
-                    <td>Front Desk</td>
+                    <td>Fri 26/04/19</td>
+                    <td><Badge variant="primary">1/14</Badge></td>
+                    <td>Booked (Front Desk)</td>
                     <td>
-                      <Badge variant="primary">Attended</Badge>
+                    <Button variant="outline-secondary btn-sm">Edit</Button>{" "}
+                    <Button variant="outline-danger btn-sm">Cancel</Button>
                     </td>
                   </tr>
                   <tr>
-                    <td>Friday</td>
-                    <td>26/04/19</td>
-                    <td>Front Desk</td>
+                    <td>Fri 26/04/19</td>
+                    <td><Badge variant="primary">1/14</Badge></td>
+                    <td></td>
                     <td>
-                      <Badge variant="danger">Missed</Badge>
+                    <Button variant="outline-primary btn-sm">Sign-up</Button>
                     </td>
                   </tr>
                   <tr>
-                    <td>Friday</td>
-                    <td>26/04/19</td>
-                    <td>Front Desk</td>
+                    <td>Fri 26/04/19</td>
+                    <td><Badge variant="primary">1/14</Badge></td>
+                    <td></td>
                     <td>
-                      <Badge variant="primary">Attended</Badge>
+                    <Button variant="outline-primary btn-sm">Sign-up</Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Fri 26/04/19</td>
+                    <td><Badge variant="primary">1/14</Badge></td>
+                    <td></td>
+                    <td>
+                    <Button variant="outline-primary btn-sm">Sign-up</Button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Fri 26/04/19</td>
+                    <td><Badge variant="primary">1/14</Badge></td>
+                    <td></td>
+                    <td>
+                    <Button variant="outline-primary btn-sm">Sign-up</Button>
                     </td>
                   </tr>
                 </tbody>
@@ -157,6 +159,8 @@ export default class Homepage extends Component {
               <ButtonGroup>
                 <Button size="sm" variant="secondary">1</Button>
                 <Button size="sm" variant="secondary">2</Button>
+                <Button size="sm" variant="secondary">3</Button>
+                <Button size="sm" variant="secondary">4</Button>
                 <DropdownButton
                   size="sm"
                   variant="secondary"
