@@ -8,7 +8,6 @@ import Calendar from "react-calendar";
 // bootstrap components
 import { Container, Row, Col, Alert, Button, Badge, Table, ListGroup, Dropdown, DropdownButton, ButtonGroup } from 'react-bootstrap'
 
-
 class AlertNotice extends Component {
     constructor(props) {
       super(props);
@@ -42,14 +41,18 @@ export default class Rosters extends Component {
     };
   }
 
+
   render() {
+
+    let selDay = this.props.match.params.page;
+
     return (
       <div style={{ marginTop: 25 }}>
         <Container>
           {/* Stack the columns on mobile by making one full-width and the other half-width */}
           <Row>
             <Col>
-            {/* <AlertNotice /> */}
+            <AlertNotice />
 
               <h4>Computerbank Rosters</h4>
               <p>
@@ -97,7 +100,7 @@ export default class Rosters extends Component {
                 </tbody>
               </Table>
               <hr />
-              <h5>Upcoming Rosters for Fridays</h5>
+              <h5>Upcoming Rosters for {selDay}</h5>
               <p>
                 If you forgot to sign in you can edit your attendance under the
                 manage menu above, this data is used for aggregated and

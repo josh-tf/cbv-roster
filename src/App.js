@@ -3,11 +3,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-import Homepage from "./components/Homepage";
-import Rosters from "./components/rosters/Rosters";
-import UserCreate from "./components/UserCreate";
-import UserEdit from "./components/UserEdit";
-import UserIndex from "./components/UserIndex";
+import Routes from './Routes';
 
 import Button from "react-bootstrap/Button";
 import Navbar from "react-bootstrap/Navbar";
@@ -47,13 +43,7 @@ class App extends Component {
               </Navbar.Collapse>
             </Navbar>
           </div>
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route path="/rosters" component={Rosters} />
-            <Route exact path="/manage/user/create" component={UserCreate} />
-            <Route path="/manage/user/edit/:id" component={UserEdit} />
-            <Route path="/manage/user/index" component={UserIndex} />
-          </Switch>
+        <Routes/>
         </div>
       </Router>
     );
