@@ -1,60 +1,26 @@
-# CBV Rosters
+# cbv-roster
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/josh-tf/cbv-roster/graphs/commit-activity)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/josh-tf/cbv-pos.svg)](https://github.com/josh-tf/cbv-roster/pulls/)
-[![GitHub issues](https://img.shields.io/github/issues/josh-tf/cbv-pos.svg)](https://GitHub.com/josh-tf/cbv-roster/issues/)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
-[![GitHub commits](https://img.shields.io/github/commit-activity/y/josh-tf/cbv-pos.svg)](https://github.com/josh-tf/cbv-roster/commit/)
+An early-stage web app for managing volunteer rosters at a nonprofit.
 
-**cbv-roster** is a web application for managing volunteer rosters at [Computerbank Victoria Inc.](http://computerbank.org.au).
+> Archived. No longer maintained.
 
-The goal of the project is to create an easy to use/manage roster system with possible future expansion with other volunteer related features (chat, file sharing etc).
+The React front end has a calendar-based roster view and pages to create, list and edit volunteers. An Express API on port 4200 stores volunteers (username and full name) in MongoDB under `/voluser`. Roster generation and sign-up were planned but not built.
 
 ## Stack
 
-Details of the current full-stack can be found below, components may change or be added in the future as additional requirements are included in the project pipeline.
+- React (Create React App), React Router, React Bootstrap, `react-calendar`, Moment
+- Node.js, Express, Mongoose
+- MongoDB
 
-**Front end -** [React](https://reactjs.org/) <br>
-**Back end -** [Node.js](https://nodejs.org/) + [Express.js](https://expressjs.com/) <br>
-**Database -** [MongoDB](https://www.mongodb.com/) <br>
+## Develop
 
-![](https://i.imgur.com/CylWiH5.jpg) ![](https://i.imgur.com/EGWlnxq.jpg) <br>
-![](https://i.imgur.com/QWG5K3P.jpg) ![](https://i.imgur.com/8k0NJQN.jpg)
-
-
-## Installation / Running
-
-Clone this repository and `cd` in to it and then run the following commands:
-```bash
-yarn start
-nodemon server/server
-```
-`yarn start` will run the app server and display the front end<br>
-`nodemon server/server` will run `server.js` which handles the endpoint for database actions (insert, update, etc) via its own router.
-
-## Database Configuration
-The MongoDB server is not provided as part of this package, you will need to run a server instance and create the `cbv-roster` database.
-
-If you are running on a non standard port you can edit this in `database\db.js`. At some point this will be handled as part of the build.
-```javascript
-module.exports  = {
-db: 'mongodb://localhost:27017/cbv-roster'
-}
+```sh
+# needs a MongoDB server; the connection string is in server/database/db.js
+yarn install
+yarn start                  # React dev server
+npx nodemon server/server   # API on port 4200
 ```
 
-## To-do / Project Pipeline
+## License
 
-This will be an on-going project and will also function as a tool to learn the various components of the stack, some of the required functionality for the application will include:
-
- - Generating rosters (weekly on schedule + adhoc)
- - User management system with login
- - Ability to 'sign up' to a roster
- - Email notifications (possible SMS notifications?)
- - Various admin tasks (edit rosters, users etc)
-
-Suggestions are welcome, please open an issue to discuss or contact me via the email under my user page.
-
-## Authors & Licence
-
-- Currently developed with ❤️ by [josh-tf](https://github.com/josh-tf) 
-- This project is created under the [MIT](https://choosealicense.com/licenses/mit/) licence
+MIT
